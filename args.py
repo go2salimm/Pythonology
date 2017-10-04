@@ -21,3 +21,6 @@ args = ("two", 3, 5)
 test_args_kwargs(*args)
 kwargs = {"arg3": 3, "arg2": "two", "arg1": 5}
 test_args_kwargs(**kwargs)
+
+
+# So if you want to use all three of these in functions then the order is some_func(fargs, *args, **kwargs)
