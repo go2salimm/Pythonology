@@ -1,1 +1,3 @@
 # Pythonology
+
+Intermediate Python Learning.
