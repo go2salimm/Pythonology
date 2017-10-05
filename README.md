@@ -18,6 +18,13 @@ iterator -->  next or __next__
 iteration --> looping 
 Generators are iterators.  You iterate over them once.  They generate the values on the fly and yield.
 
+
+# Map, Filter and Reduce
+map applies a function to all the items in the inputlist:  map(function_to_apply, list_of_inputs)
+filter creates a list of elements for which a function returns true
+reduce is a useful function for performing computation on a list and returning the result
+
+
 # References :
 Intermediate Python Learning - http://book.pythontips.com/en/latest
 
