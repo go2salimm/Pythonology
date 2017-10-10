@@ -41,3 +41,4 @@ for num in list:
 from functools import reduce
 product = reduce((lambda x, y : x*y), list)
 print "product using reduce :", product
+
