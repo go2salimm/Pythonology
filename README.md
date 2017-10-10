@@ -24,6 +24,17 @@ map applies a function to all the items in the inputlist:  map(function_to_apply
 filter creates a list of elements for which a function returns true
 reduce is a useful function for performing computation on a list and returning the result
 
+# set
+Sets behave mostly like lists but they cannot contain duplicate values.
+
+# decorators
+Decorators let you execute code before and after a function. 
+Decorators wrap a function and modify its behavior
+eg. def a_new_decorator(func):
+    @a_new_decorator
+    def b_func()   
+ equals b_func = a_new_decorator(b_func)
+
 
 # References :
 Intermediate Python Learning - http://book.pythontips.com/en/latest
