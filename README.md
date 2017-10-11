@@ -34,6 +34,30 @@ eg. def a_new_decorator(func):
     @a_new_decorator
     def b_func()   
  equals b_func = a_new_decorator(b_func)
+ 
+
+# Mutation
+In Python the default arguments are evaluated once when the function is defined, not each time the function is called. 
+You should never define default arguments of mutable type unless you know what you are doing.
+
+# __slots__
+By default Python uses a dict to store an object’s instance attributes. 
+However, for small classes with known attributes it might be a bottleneck. The dict wastes a lot of RAM. 
+__slots__ tells Python not to use a dict, and only allocate space for a fixed set of attributes.
+
+
+# virtual envs
+virtualenv! creates isolated environments for your python application 
+It allows you to install Python libraries in that isolated environment instead of installing them globally so
+you can have specific version of the libraries for your app.
+
+pip install virtualenv
+virtualenv SMProject
+source bin/activate
+virtualenv --system-site-packages myproject
+deactivate
+
+Running python after deactivating will use your system installation of Python again.
 
 
 # References :

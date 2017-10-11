@@ -125,7 +125,7 @@ myfunc2()
 
 
 class logit(object):
-    def __init__(self, logfile = 'outclass.log'):
+    def __init__(self, logfile = '/tmp/outclass.log'):
         self.logfile = logfile
 
     def __call__(self, func):
@@ -153,4 +153,21 @@ class email_logit(logit):
 
     def notify(self):
         pass
+
+
+print "\n\n Using __slots__ to save memory for class instances"
+
+#import ipython_memory_usage.ipython_memory_usage as imu
+#imu.start_watching_memory()
+
+class MyClass(object):
+    __slots__ = ['name', 'identifier']
+    def __init__(self, name, identifier):
+        self.name = name
+        self.identifier = identifier
+
+
+num = 1024 * 256
+x = [ MyClass(1,1) for i in range(num)]
+print x[0]
 
