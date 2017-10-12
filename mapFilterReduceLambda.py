@@ -32,13 +32,43 @@ print (less_than_zero)
 
 print "\nReduce"
 product = 1
-list = [1,2,3,4]
-for num in list:
+lister = [1,2,3,4]
+for num in lister:
     product = product * num
     print product
 
 
+print "\nLambda"
+
 from functools import reduce
-product = reduce((lambda x, y : x*y), list)
+product = reduce((lambda x, y : x*y), lister)
 print "product using reduce :", product
 
+
+add = lambda x, y : x + y
+print add(3,5)
+
+a = [(1,2), (4,1), (9,10), (13,-3)]
+#a.sort(key=lambda x: x[1])
+print a
+
+
+data = zip(a, lister)
+data.sort()
+print data
+
+list1, list2 = map(lambda t : list(t), zip(*data))
+print "list1 = " , list1
+print "list2 = " , list2
+
+
+print "for .. else"
+
+for n in range(2, 10):
+    for x in range(2,n):
+        if n % x == 0:
+            #print str(n) + "equals" + str(x) + '*' , str(n/x)
+            print (n , "equals", x, "*", n/x)
+            break
+    else:
+        print (n, "is a prime number")
