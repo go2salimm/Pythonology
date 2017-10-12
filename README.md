@@ -19,13 +19,21 @@ iteration --> looping
 Generators are iterators.  You iterate over them once.  They generate the values on the fly and yield.
 
 
-# Map, Filter and Reduce
+# Map, Filter, Reduce, Lambda
 map applies a function to all the items in the inputlist:  map(function_to_apply, list_of_inputs)
 filter creates a list of elements for which a function returns true
 reduce is a useful function for performing computation on a list and returning the result
+lambda argument : manipulate(argument)
 
-# set
+# set , defaultdict, OrderedDict
 Sets behave mostly like lists but they cannot contain duplicate values.
+with defaultdict you do not need to check whether a key is present or not. Useful when appending to nested list inside a dictionary.
+OrderedDict keeps its entries sorted as they are initially inserted. 
+Overwriting a value of an existing key doesn’t change the position of that key. However, deleting and reinserting an entry moves the key to the end of the dictionary.
+
+# comprehensions
+3 types : list comprehensions, dictionary comprehensions, set comprehensions
+similar syntax for list and set comprehensions.
 
 # decorators
 Decorators let you execute code before and after a function. 
