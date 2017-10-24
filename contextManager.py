@@ -42,3 +42,17 @@ def open_file(name):
     f = open(name, 'w')
     yield f
     f.close()
+
+
+# Let’s dissect this method a little.
+#
+#     Python encounters the yield keyword. Due to this it creates a generator instead of a normal function.
+#     Due to the decoration, contextmanager is called with the function name (open_file) as it’s argument.
+#     The contextmanager function returns the generator wrapped by the GeneratorContextManager object.
+#     The GeneratorContextManager is assigned to the open_file function. Therefore, when we later call open_file function, we are actually calling the GeneratorContextManager object.
+#
+# So now that we know all this, we can use the newly generated Context Manager like this:
+
+with open_file('some_file') as f:
+    f.write('hola!')
+
