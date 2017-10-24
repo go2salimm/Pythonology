@@ -17,6 +17,8 @@ iterable -->  __iter__ or __getitem__
 iterator -->  next or __next__
 iteration --> looping 
 Generators are iterators.  You iterate over them once.  They generate the values on the fly and yield.
+generators are data producers
+coroutines are data consumers
 
 
 # Map, Filter, Reduce, Lambda
@@ -66,6 +68,11 @@ virtualenv --system-site-packages myproject
 deactivate
 
 Running python after deactivating will use your system installation of Python again.
+
+
+# context managers
+it allows you to have two related operations to execute as a pair
+a context manager has an __enter__ and __exit__ methods defined so we can use it in a "with" statement.
 
 
 # References :

@@ -32,3 +32,28 @@ print(next(myiter))
 print(next(myiter))
 
 
+
+print "Coroutines"
+
+def grep(pattern):
+    print("Searching for ", pattern)
+    while True:
+        line = (yield)
+        if pattern in line:
+            print line
+
+
+
+search = grep('coroutine')
+next(search)
+
+search.send("hello")
+search.send("new world ")
+search.send("this is coroutines")
+
+search.close()
+
+
+from functools import lru_cache
+
+
