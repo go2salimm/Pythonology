@@ -10,6 +10,7 @@
 # #print hi()
 # print greet()
 
+import os, requests
 
 def hi(name='Salim'):
     print "Inside hi function"
