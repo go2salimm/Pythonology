@@ -31,6 +31,7 @@ def hi(name='Salim'):
     #print welcome()
     #print "Now back in the hi function"
 
+# git commit
 
 a = hi()
 print "a = " , a
